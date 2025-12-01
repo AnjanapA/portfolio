@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #fff;
+    background: #0d1117;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #161b22;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-links li a:hover {
+    color: #58a6ff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #0d1117, #161b22);
+}
+
+/* FLEX LAYOUT */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* responsive */
+}
+
+/* TEXT COLUMN */
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+    padding-right: 20px;
+}
+
+/* IMAGE COLUMN */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* push image to right */
+    min-width: 180px;
+}
+
+/* IMAGE STYLING */
+.hero-image img {
+    width: 500px;
+    /* adjust size */
+    height: 500px;
+    /* equal height for circle */
+    object-fit: cover;
+    border-radius: 50%;
+    /* makes circle */
+    border: 3px solid #58a6ff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-image {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text span {
+    color: #58a6ff;
+}
+
+.hero-text .btn {
+    padding: 12px 25px;
+    background: #58a6ff;
+    color: #000;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-content img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* SKILLS */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.skill-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* PROJECTS */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* CONTACT */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 12px;
+    background: #58a6ff;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.contact .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #58a6ff;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact .btn:hover {
+  background-color: #1c3f7a;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    background: #161b22;
+    text-align: center;
+}
+
+/* RESPONSIVE MENU */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #161b22;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
